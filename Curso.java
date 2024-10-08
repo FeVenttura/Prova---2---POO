@@ -7,7 +7,7 @@ public class Curso {
     int cargaHoraria;
     int idProfessor;
    
-     static ArrayList<Curso> cursos = new ArrayList<Curso>();
+     static ArrayList<Curso> cursos = new ArrayList<Curso>();  //declarando arraylist estática
 
     public Curso(
     int id,
@@ -23,7 +23,7 @@ public class Curso {
     cursos.add(this);
     }
     
-    static Curso buscarCurso(int id) {
+    static Curso buscarCurso(int id) { //método para adicionar o curso ao aluno
         for (Curso curso : cursos ) {
             if (curso.id == id) {
                 return curso;

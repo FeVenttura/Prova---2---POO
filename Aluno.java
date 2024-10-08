@@ -10,7 +10,7 @@ public class Aluno {
     int idCurso;
     
 
-    static ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+    static ArrayList<Aluno> alunos = new ArrayList<Aluno>();  //declarando arraylist estática
 
     public Aluno(
     int id,
@@ -30,7 +30,7 @@ public class Aluno {
     alunos.add(this);
 
     }
-    static int contarAlunosPorProfessor(int idProfessor) {
+    static int contarAlunosPorProfessor(int idProfessor) { //método para contar os alunos por professor
         int cont = 0;
         for (Aluno aluno : alunos) {
             if (aluno.idProfessor == idProfessor) {

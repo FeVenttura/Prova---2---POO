@@ -6,7 +6,7 @@ public class Professor{
     String nome;
     String departamento;
 
-    static ArrayList<Professor> professores = new ArrayList<Professor>();
+    static ArrayList<Professor> professores = new ArrayList<Professor>(); //declarando arraylist estática
 
     public Professor(
     int id,
@@ -20,7 +20,7 @@ public class Professor{
     professores.add(this);
     }
 
-    static Professor buscarProfessor(int id) {
+    static Professor buscarProfessor(int id) { //método para adicionar professor ao curso
         for (Professor professor : professores) {
             if (professor.id == id) {
                 return professor;

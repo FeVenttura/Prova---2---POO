@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -7,7 +6,7 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         int opt=0;
 
-        do{
+        do{ //iniciando o do para o menu
             System.out.println("Opções: ");
             System.out.println("1 - Cadastrar Professor");
             System.out.println("2 - Cadastrar Curso");
@@ -16,14 +15,14 @@ public class Menu {
             System.out.println("5 - Listar Cursos");
             System.out.println("6 - Listar Alunos");
             System.out.println("7 - Sair");
-            try{
+            try{ //try cacht para evitar erros
                 opt = scanner.nextInt();
             } catch (Exception e) {
                 System.out.println("Opção inválida!");
                 scanner.nextLine();
                 continue;
             }
-            switch(opt) {
+            switch(opt) { //iniciando os switchs
                 case 1:
                 try {
                     System.out.println("Digite o ID do professor");
@@ -71,7 +70,8 @@ public class Menu {
                     System.out.println("Erro ao cadastrar aluno");
                 }
                 break;
-                case 4:
+                 // a partir daqui, usando for each para listar atributos
+                case 4: 
                     System.out.println("Listar professores ");
                         for (Professor professor : Professor.professores) {
                         System.out.println(" Nome:" + professor.nome + " Departamento: " + professor.departamento + " Alunos: " + Aluno.contarAlunosPorProfessor(professor.id));
